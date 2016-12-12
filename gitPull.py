@@ -1,3 +1,6 @@
 import os
+import rpiutil
 
-os.system("cd /home/pi/Desktop/git/Rpi/ && git pull")
+def pull():
+	os.system("cd /home/pi/Desktop/git/Rpi/ && git pull")
+	rpiutil.logOutput("gitPull", "git pull done")

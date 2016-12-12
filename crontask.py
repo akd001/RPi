@@ -1,0 +1,3 @@
+import gitPull
+
+gitPull.pull()
