@@ -2,5 +2,5 @@ import os
 import rpiutil
 
 def pull():
-	outString = os.system("cd /home/pi/Desktop/git/Rpi/ && git pull")
+	outString = os.system("git pull")
 	rpiutil.logOutput("gitPull", outString)
