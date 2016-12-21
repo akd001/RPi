@@ -29,5 +29,5 @@ def sendMail (mailSubject, mailBody):
 	msg['From'] = getMailData('mailUserName')
 	msg['To'] = getMailData('mailTo')
 	smtpServer = getSmtpServer()
-	smtpServer.sendmail(gmail_user, [getMailData('mailTo')], msg.as_string())
+	smtpServer.sendmail(getMailData('mailUser'), [getMailData('mailTo')], msg.as_string())
 	smtpServer.quit()
