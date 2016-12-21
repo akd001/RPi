@@ -1,9 +1,9 @@
 def getHome ():
 	return '/Users/ambar/Desktop/Workspace/Rpi/'
 
-sys.path.insert(0, getHome() + 'data')
 import sys, datetime, time, smtplib
 from email.mime.text import MIMEText
+sys.path.insert(0, getHome() + 'data')
 import data
 
 def logOutput (fileName, logString):
