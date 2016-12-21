@@ -1,8 +1,9 @@
-def getHome ():
-	return '/Users/ambar/Desktop/Workspace/Rpi/'
-
-import sys, datetime, time, smtplib
+import sys, datetime, time, smtplib, init
 from email.mime.text import MIMEText
+
+def getHome ():
+	return init.constants['home']
+
 sys.path.insert(0, getHome() + 'data')
 import data
 
