@@ -1,4 +1,4 @@
-import subprocess, re, urllib, time, rpiutil
+import subprocess, re, urllib, datetime, rpiutil
 
 def connect_type (word_list):
     if 'wlan0' in word_list or 'wlan1' in word_list:
@@ -14,7 +14,7 @@ def getPrivateIp () :
 	p=subprocess.Popen(arg,shell=True,stdout=subprocess.PIPE)
 	data = p.communicate()
 	ip_lines = data[0].splitlines()
-	split_line_b = ip_lines[2].split()
+	split_line_b = ip_lines[1].split()
 	ip_type_b = connect_type(split_line_b)
 	ipaddr_b = split_line_b[split_line_b.index('src')+1]
 	privateIpString = 'Your %s private ip: [%s]' % (ip_type_b, ipaddr_b)
